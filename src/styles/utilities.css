@@ -1,0 +1,30 @@
+/* Layout + color helpers shared by every screen. Text styles are the .type-* classes in tokens.css. */
+
+/* Screen: side gutter, room for the floating navbar and the home indicator. */
+.screen { padding: 0 var(--space-gutter) calc(var(--size-navbar) + var(--space-16) + env(safe-area-inset-bottom)); }
+.screen.no-tab { padding-bottom: calc(var(--space-8) + env(safe-area-inset-bottom)); }
+/* Wide (iPhone Duo unfolded): navigation is a side rail, so no room is needed below. */
+@container (min-width: 700px) { .screen { padding-bottom: calc(var(--space-8) + env(safe-area-inset-bottom)); } }
+.section { margin-top: var(--space-section); }
+
+.row { display: flex; align-items: center; gap: var(--space-3); }
+.row-top { align-items: flex-start; }
+.stack-1 { display: grid; gap: var(--space-1); }
+.stack-2 { display: grid; gap: var(--space-2); }
+.stack-3 { display: grid; gap: var(--space-3); }
+.grow { flex: 1; min-width: 0; }
+.center { text-align: center; }
+
+.text-heading { color: var(--color-text-heading); }
+.text-muted { color: var(--color-text-muted); }
+.text-subtle { color: var(--color-text-subtle); }
+.text-brand { color: var(--color-text-brand); }
+.text-accent-strong { color: var(--color-accent-strong); }
+.text-warning { color: var(--color-warning-text); }
+.text-inverse-muted { color: var(--color-text-inverse-muted); }
+
+.link { font: var(--type-label); color: var(--color-text-brand); }
+
+/* Page transition used by the router view. */
+.fade-enter-active, .fade-leave-active { transition: opacity var(--duration-base) ease, transform var(--duration-base) ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; transform: translateY(6px); }
