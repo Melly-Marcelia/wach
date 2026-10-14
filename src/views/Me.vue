@@ -78,6 +78,8 @@ function replay() {
 .avatar {
   width: 64px; height: 64px; border-radius: var(--radius-xl); flex: none; display: grid; place-items: center;
   background: var(--color-surface-brand); color: var(--color-text-inverse);
+  /* Display tracking leaves negative space after a lone glyph, and line-height skews it vertically */
+  letter-spacing: 0; line-height: 1; text-box: trim-both cap alphabetic;
 }
 .goal-title { margin: var(--space-2) 0 var(--space-1); }
 .goal-coach { margin-top: var(--space-4); padding-top: var(--space-4); box-shadow: 0 -1px 0 var(--color-border-inverse); }
