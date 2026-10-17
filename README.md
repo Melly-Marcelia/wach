@@ -4,11 +4,11 @@
 
 WACH is a running app that turns raw wearable data into guidance you can act on. Most running apps show charts. WACH interprets your data, adapts your training plan to how you feel, and keeps you safe during runs.
 
-This is an interactive prototype of the revised UI, built with Vue 3 and Vite. All data is mocked.
+This is an interactive prototype of the UI, built with Vue 3 and Vite. All data is mocked.
 
-## The revision
+## Design principles
 
-Jury feedback on the first version: *the concept is solid, but the UI doesn't reflect it.* The old screens were dashboards (charts, stat tiles, "Training load 602"), which is exactly what the pitch says WACH is not. The revision is built on four rules:
+WACH is not a dashboard of charts and stat tiles. The UI is built on four rules:
 
 1. **Every metric is translated.** Each health metric follows the same pattern: a human name ("Recovery", not "HRV"), where today sits against *your own* normal range, what that means, and what to do. The technical term stays in small print. Tap any metric on Today to see this.
 2. **The coach speaks first.** Every screen opens with an interpretation. The numbers come after, as evidence.
